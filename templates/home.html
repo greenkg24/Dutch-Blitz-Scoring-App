@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Dutch Blitz App</title>
+</head>
+<body>
+
+    <div class="flex-container">
+        <div class="home-title-container">
+            <p><h1>WELCOME</h1> to the <h1>DUTCH BLITZ</h1> scoring app</p>
+        </div>
+        <div class="button-container">
+            <button class = "theme_btn" id = "myBtn"><span>Start New Game </span></button>
+        </div>
+        <div id="home-modal" class="modal flex-container">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form action="{{ url_for('new_game') }}" methods = 'POST'>
+                    <label for="nplayers">How many players?</label><br>
+                    <input type="number" id="nplayers" name="nplayers" step="1" required>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+    </div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("home-modal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+console.log(modal);
+console.log(btn);
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+    modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

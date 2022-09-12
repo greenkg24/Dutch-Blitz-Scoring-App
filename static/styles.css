@@ -1,0 +1,177 @@
+.flex-container {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.flex-container-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.home-title-container {
+    background-color: none;
+    border: 2px solid red;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    color:green;
+    font-size:4.3vw;
+    margin-top:10%;
+}
+
+.home-title-container p {
+    color:white;
+    font-weight: 900;
+    align-items: center;
+}
+
+.button-container {
+    display:flex;
+    flex-flow:column wrap;
+    align-items: center;
+    margin-top:200px;
+}
+
+.theme_btn {
+    min-width: 200px;
+    min-height: 50px;
+    background: green;
+    border: none;
+    box-shadow: 0 0 8px -2px;
+    text-align: center;
+    font-size:20px;
+    transition: all .5s;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    margin: 10px;
+}
+
+.start-game-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: .5s;
+}
+
+.start-game-button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: .5s;
+}
+
+.start-game-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.start-game-button:hover span {
+    padding-right: 25px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+/* .player-card {
+    border: 2px solid grey;
+    border-radius: 4px;
+    padding: 5px;
+    max-width: 50%;
+    background: beige;
+    margin-bottom: 5px;
+} */
+
+.column {
+    float: left;
+    width: 50%;
+    padding: 10px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header {
+    color: white;
+    background: green;
+}
+
+.col_a {
+    color: black;
+    background: #aaa;
+}
+ .col_b {
+    color: black;
+    background: #bbb;
+ }
+
+ .page-id-gameplay * {
+    box-sizing: border-box;
+ }
+
+ .score-card {
+    border: 1px solid black;
+    padding: 5px;
+    margin-bottom: 10px;
+    background: green;
+    border-radius: 4px;
+    box-shadow: 0 0 8px -2px;
+ }
+
+ .player-name-label {
+    color:yellow !important;
+ }
+
+ .page-id-gameplay label {
+    color:white;
+ }
+
+ #scoring-form > div:first-of-type {
+    margin-top: 35px;
+ }
